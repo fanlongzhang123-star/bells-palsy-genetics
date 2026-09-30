@@ -1,0 +1,15 @@
+rank	trait	p	beta	mlogp	kind
+1	Bell's palsy	6.1e-24	0.2016	23.214670164989233	target
+2	Spondylopathies	5.3e-11	0.0442	10.275724130399212	skeletal
+3	Spinal stenosis	1.23e-10	0.0596	9.910094888560602	skeletal
+4	Dorsopathies	1.66e-09	0.0268	8.779891911959945	skeletal
+5	Other intervertebral disc disorders	6.51e-06	0.0303	5.186419011431808	skeletal
+6	Coxarthrosis	9.4e-06	0.0387	5.026872146400302	skeletal
+7	Early lumbar disc prolapse, operated	1.7e-05	0.0897	4.769551078621726	skeletal
+8	Lumbar disc prolapse	1.93e-05	0.0337	4.714442690992226	skeletal
+9	Dorsalgia	2.27e-05	0.023	4.6439741428068775	skeletal
+10	Cervical disc disorders	2.3e-05	0.0458	4.638272163982407	skeletal
+11	Coxarthrosis, primary, with hip surgery	2.79e-05	0.0419	4.554395796726403	skeletal
+12	Autoimmune diseases, non-thyroid	0.893	-0.0008	0.049148541111453566	autoimmune
+13	Nerve, nerve root and plexus disorders	0.338	0.0057	0.47108329972234525	entrapment
+14	Type 2 diabetes	0.471	-0.0041	0.3269790928711038	metabolic

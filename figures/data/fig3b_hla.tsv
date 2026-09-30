@@ -1,0 +1,12 @@
+trait	phenocode	category	n_cases	n_alleles	top_allele	top_p	n_lt_5e8
+Bell's palsy	G6_BELLPA	target	5062	187	DPB1*04:01	4.45554e-06	0
+Nerve, nerve root and plexus disorders	G6_NERPLEX	entrapment	68559	187	DQB1*03:02	7.87046e-17	12
+Carpal tunnel syndrome	G6_CARPTU	entrapment	32951	187	DQB1*03:02	3.14847e-12	6
+Epilepsy	G6_EPLEPSY	neuro	16295	187	A*24:02	0.00259173	0
+Autoimmune diseases, non-thyroid	AUTOIMMUNE_NONTHYROID	autoimmune	72412	187	DQB1*03:02	5.05825e-309	71
+Autoimmune hypothyroidism	E4_HYTHY_AI_STRICT	autoimmune	56098	187	DRB4*01:03	5.09331e-122	55
+Type 1 diabetes	T1D_WIDE	autoimmune	11197	187	DQA1*01:02	0.0	100
+Rheumatoid arthritis	M13_RHEUMA	autoimmune	16775	187	DRB4*01:03	2.5704e-289	62
+Psoriasis	L12_PSORIASIS	autoimmune	13309	187	C*06:02	6.47143e-309	47
+Multiple sclerosis	G6_MS	autoimmune	3002	187	DRB5*01:01	1.15878e-175	27
+Type 2 diabetes	T2D	metabolic	89727	187	DRB1*04:01	1.76636e-08	1

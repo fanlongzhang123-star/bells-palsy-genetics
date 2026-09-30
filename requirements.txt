@@ -1,0 +1,6 @@
+# Python 3.14, standard library + numpy only.
+# No pandas / scipy: special functions and MR estimators are implemented in mrlib.py,
+# colocalisation in coloclib.py, fine-mapping in susie.py.
+numpy>=1.26
+
+# R (for figures.R): base graphics only, no extra packages required.
