@@ -1,0 +1,25 @@
+{
+  "title": "Analysis code for: Genetic architecture of Bell's palsy: a 6p21.1 locus replicated in UK Biobank and no classical HLA association in 5,062 Finnish cases",
+  "description": "<p>Python and R code for the genetic analysis of Bell's palsy in 5,062 Finnish cases and 431,627 controls (FinnGen release 13).</p><p>Includes: harmonisation and meta-analysis with a European dataset; SuSiE credible-set handling; MHC variant distribution and 187 imputed classical HLA alleles across eleven phenotypes; colocalisation; direct interrogation of the credible-set variants in every phenotype; the phenome-wide scan of rs9357446; cross-trait Mendelian randomisation and z-score relatedness; and the UK Biobank (Pan-UKB ICD-10 G51) replication look-up, including the GRCh37 to GRCh38 offset used to match the two datasets. All figures are drawn with base R.</p><p>Only public, de-identified summary statistics are used. No individual-level data are included or redistributed.</p>",
+  "upload_type": "software",
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "version": "1.1",
+  "publication_date": "2026-10-14",
+  "creators": [
+    {
+      "name": "Zhang, Fanlong",
+      "orcid": "0009-0000-0492-0873"
+    }
+  ],
+  "keywords": [
+    "Bell's palsy",
+    "genome-wide association study",
+    "fine-mapping",
+    "major histocompatibility complex",
+    "colocalisation",
+    "UK Biobank",
+    "RUNX2"
+  ]
+}

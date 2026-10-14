@@ -12,6 +12,7 @@
 | 可信集位点直接查询 | `scripts/colocalisation_and_credible_set.py` | 图 3；四个变异在 11 个表型上的效应 |
 | 跨性状孟德尔随机化 | `scripts/cross_trait_mr.py` | 补充图 S1b；正文 OR 与 95% CI |
 | 全表型组扫描 | `scripts/phenome_scan.py` | 表 4；图 4c |
+| **UK Biobank（Pan-UKB ICD-10 G51）复制查证** | `scripts/ukb_replication.py` | 正文表 2；补充表 S2；`out/ukb_G51_credibleset_lookup.csv`（输入：`results/credibleset_variants_finngen_r13.tsv`） |
 | z 分数相关 | `scripts/genetic_relatedness.py` | 补充图 S1a |
 | 图 1 数据 | `scripts/extract_figure_data.py` | `work/fig_manhattan.tsv`, `work/fig_region.tsv` |
 | 全部图件数据汇总 | `scripts/build_figure_data.py` | `figures/data/*.tsv` |

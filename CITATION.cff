@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the manuscript below."
+title: "Analysis code for: Genetic architecture of Bell's palsy: a 6p21.1 locus replicated in UK Biobank and no classical HLA association in 5,062 Finnish cases"
+abstract: >-
+  Python and R code implementing harmonisation, meta-analysis, SuSiE credible-set
+  handling, colocalisation, credible-set interrogation, the independent UK Biobank
+  (ICD-10 G51) replication look-up, cross-trait Mendelian randomisation and all
+  figures for a genome-wide association analysis of Bell's palsy in 5,062 Finnish
+  cases and 431,627 controls.
+type: software
+license: MIT
+version: "1.1"
+date-released: "2026-10-14"
+authors:
+  - family-names: "Zhang"
+    given-names: "Fanlong"
+    orcid: "https://orcid.org/0009-0000-0492-0873"
+# 论文正式发表后取消注释并补齐:
+# preferred-citation:
+#   type: article
+#   title: "Genetic architecture of Bell's palsy: a 6p21.1 locus replicated in UK Biobank and no classical HLA association in 5,062 Finnish cases"
+#   journal: "Journal of Medical Genetics"
+#   year: 2026
+keywords:
+  - Bell's palsy
+  - genome-wide association study
+  - fine-mapping
+  - major histocompatibility complex
+  - colocalisation
+  - RUNX2

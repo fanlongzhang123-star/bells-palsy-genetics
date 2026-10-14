@@ -1,23 +1,33 @@
-# Code for: Genetic architecture of Bell's palsy in 5,062 Finnish cases
+# Code for: Genetic architecture of Bell's palsy: a 6p21.1 locus replicated in UK Biobank and no classical HLA association in 5,062 Finnish cases
 
 Analysis code accompanying the manuscript
 
-> **Genetic architecture of Bell's palsy in 5,062 Finnish cases: two non-MHC risk loci
-> and no classical HLA association**
+> **Genetic architecture of Bell's palsy: a 6p21.1 locus replicated in UK Biobank
+> and no classical HLA association in 5,062 Finnish cases**
 
 This repository contains the Python and R code used for harmonisation, meta-analysis,
-SuSiE credible-set handling, colocalisation, credible-set interrogation, cross-trait
-Mendelian randomisation and every figure in the paper. See `MANIFEST.md` for the mapping
-between each analysis and the script that performs it.
+SuSiE credible-set handling, colocalisation, credible-set interrogation, the UK Biobank
+(Pan-UKB ICD-10 G51) replication look-up, cross-trait Mendelian randomisation and every
+figure in the paper. See `MANIFEST.md` for the mapping between each analysis and the script
+that performs it.
+
+**Version history.** `v1.0` (2026-09-30) initial deposit. `v1.1` (2026-10-14) adds
+`scripts/ukb_replication.py` and `results/credibleset_variants_finngen_r13.tsv`, which
+reproduce the independent UK Biobank look-up reported in Table 2 and Supplementary Table S2
+of the manuscript; Zenodo metadata is now supplied by `.zenodo.json`.
 
 ## Layout
 
 ```
 .
-├── scripts/          analysis and figure code
-├── results/          small result tables produced by the scripts (for checking values)
+├── scripts/          analysis and figure code (including ukb_replication.py)
+├── results/          small result tables produced by the scripts (for checking values),
+│                     plus credibleset_variants_finngen_r13.tsv, the credible-set variant
+│                     list used as input by scripts/ukb_replication.py
 ├── figures.R         drawing code for all figures (base R)
 ├── MANIFEST.md       analysis -> script -> output mapping
+├── .zenodo.json      Zenodo metadata for the archived release
+├── PUSH_v1.1.md      how the v1.1 release was produced
 ├── requirements.txt
 └── LICENSE
 ```
@@ -53,6 +63,7 @@ All input data are public. Nothing here redistributes them. To re-run:
 | FinnGen R13 HLA imputation results | FinnGen R13 | HLA allele analysis |
 | FinnGen R13 pheweb variant API | `https://r13.finngen.fi/api/variant/<chrom>-<pos>-<ref>-<alt>` | phenome-wide scan |
 | Bell's palsy GWAS, GWAS Catalog **GCST90018843** (Sakaue et al.) | <https://www.ebi.ac.uk/gwas/> | meta-analysis, cross-trait comparison |
+| UK Biobank ICD-10 G51 (facial nerve disorders), **Pan-UK Biobank** `icd10-G51-both_sexes`, 1,046 cases and 419,485 controls | <https://pan-dev.ukbiobank.ac.uk/>; flat file `https://pan-ukb-us-east-1.s3.amazonaws.com/sumstats_flat_files/icd10-G51-both_sexes.tsv.bgz` (GRCh37, tabix index alongside) | independent replication look-up (Table 2, Supplementary Table S2) |
 | eQTLGen phase 1 cis-eQTL (full) | <https://www.eqtlgen.org/> | cis-eQTL annotation (Fig. 2c) |
 | Ensembl release 112 GTF, GRCh38 | <https://www.ensembl.org/> | gene coordinates |
 | 1000 Genomes phase 3 genotypes (for LD) | <https://www.internationalgenome.org/> | LD clumping, checks |
@@ -68,6 +79,7 @@ python scripts/mhc_snp_scan.py
 python scripts/hla_alleles.py
 python scripts/colocalisation_and_credible_set.py
 python scripts/cross_trait_mr.py
+python scripts/ukb_replication.py             # UK Biobank look-up; needs internet access only
 python scripts/extract_figure_data.py
 python scripts/build_figure_data.py
 Rscript figures.R                             # writes figures/Fig*.pdf and .png
@@ -94,6 +106,13 @@ the figures can be redrawn without re-running the genetics. To rebuild them from
 - **Distance pruning for cross-trait Mendelian randomisation walks the genome in order**
   and retains the most significant variant per window. An earlier version sorted variants
   by P value first, which left thousands of correlated instruments.
+- **Pan-UK Biobank is distributed in GRCh37 and FinnGen release 13 in GRCh38.** In the two
+  windows analysed the builds differ by a constant 32,263 bp, established by indexing both
+  datasets on allele pairs and tabulating the position difference between matches (1,176 and
+  1,025 exact matches at that offset, about 23 at any other). `scripts/ukb_replication.py`
+  maps positions with this offset, matches variants on the allele pair, and reverses the sign
+  of the effect where the allele order differs; the P value is recomputed from the reported
+  beta and standard error rather than read from the file's neglog10 column.
 
 ## Licence
 
